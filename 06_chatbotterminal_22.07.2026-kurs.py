@@ -30,6 +30,9 @@ while True:
         zapiszwpliku()
         print("\n Do widzenia!")
         break
+    if odp.strip() == "":
+        print("Napisz coś do Chatbotu AI")
+        continue
     historia.append({
         "role": "user",
         "content": odp
