@@ -1,0 +1,61 @@
+:root{
+    --main-color: #fff;
+    --main-color-bg:#FF0000;
+    --main-color-backgraund: #0FFF00;
+    --color-background: orange;
+}
+body{
+    color: lightblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    background-color: grey;
+    color: darkgreen;
+    font-size: 25px;
+    line-height: 1.5;
+}
+.odp-ai{
+    background-color: lightcyan;
+    padding: 20px;
+}
+.odp-user{
+    background-color: lightgreen;
+    padding: 20px;
+}
+footer{
+    background-color: lightgreen;
+    padding: 30px;
+    text-align: center;
+    color: chocolate;
+}
+#chat{
+    padding: 30px;
+    margin: 20px;
+    border: 3px dashed var(--main-color);
+}
+@media (max-width: 600px) {
+    #chat {
+    padding: 15px;
+    margin: 10px;
+    border: 2px solid #000;
+}
+}
+button {
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+button:hover{
+    background-color: var(--main-color-backgraund);
+    transform: scale(0.95);
+}
+button:focus{
+    background-color: var(--main-color-bg);
+}
+form{
+    display: flex;
+}
+input, textarea{
+    box-sizing: border-box;
+}
+input[type="checkbox"]{
+    accent-color: var(--color-background);
+}
