@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>CHAT AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='05_stylcss_15.07.2026-kurs.css') }}">
+</head>
+<body>
+    <section id="chat">
+        <h3>Chatuj z AI</h3>
+        <form action="/zapytaj" method="POST">
+            <label>Jaki chcesz prompt do chat AI<small> (jeżeli nie ma to jest interpretowany jako brak ustawionego promptu)</small></label>
+            <select name="styl" id="styl">
+                <option value="0" selected>Zwykły/podstawowy</option>
+                <option value="1">krótko</option>
+                <option value="2">długo</option>
+                <option value="3">ekspert</option>
+                <option value="4">nauczyciel</option>
+            </select>
+            <label for="text">Odpisz:</label>
+            <textarea id="text" name="text" placeholder="Napisz coś ..." rows="5" required></textarea>
+            <button type="submit">Wyślij</button>
+        </form><br>
+        <div class="odp-ai">
+            {% if odpowiedz %}
+                <p>{{ odpowiedz }} </p>
+            {% else %}
+                <p>Tutaj pojawi się odpowiedź AI. </p>
+            {% endif %}
+        </div>
+    </section>
+</body>
+</html>
